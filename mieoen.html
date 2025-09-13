@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mie Oen Coolin Air — Street Food & Minuman Tradisional</title>
+  <meta name="description" content="Mie Oen Coolin Air — street food dan minuman tradisional: dawet, wedang, seblak, mie ayam, madu asli, susu etawa." />
+  <style>
+    :root{--accent:#e76f51;--muted:#444}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      line-height:1.5;color:#222;
+      background: linear-gradient(to bottom, #e6ffe6, #ffffff);
+    }
+    .container{max-width:1000px;margin:0 auto;padding:20px}
+    header img{width:100%;display:block}
+
+    h1{margin:0;font-size:26px}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+
+    .card{
+      padding:18px;margin:18px 0;border-radius:12px;
+      background:#fff;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06);
+      opacity:0; transform:translateY(20px);
+      transition: all .6s ease;
+    }
+    .card.show{opacity:1; transform:translateY(0)}
+
+    .btn{
+      display:inline-block;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition: all .3s ease;
+    }
+    .btn:hover{transform:scale(1.05);box-shadow:0 6px 16px rgba(0,0,0,0.15)}
+
+    .muted{color:var(--muted);font-size:14px}
+
+    footer{margin:24px 0;color:#666;font-size:13px;text-align:center}
+
+    /* SLIDER */
+    .slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      padding: 10px;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+    .slides img {
+      width: 250px;
+      height: auto;
+      margin-right: 16px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      border: none;
+      font-size: 20px;
+      padding: 8px 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+      transition: background .3s;
+    }
+    .prev:hover, .next:hover {background: rgba(0,0,0,0.6);}
+    .prev { left: 5px; }
+    .next { right: 5px; }
+
+    /* DOTS */
+    .dots {
+      text-align: center;
+      margin-top: 12px;
+    }
+    .dots span {
+      display: inline-block;
+      width: 10px; height: 10px;
+      margin: 0 4px;
+      background: #ccc;
+      border-radius: 50%;
+      transition: background .3s;
+    }
+    .dots .active {background: var(--accent);}
+
+    @media(max-width:720px){
+      h1{font-size:22px}
+      .slides img{width:200px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SPANDUK -->
+  <header>
+    <img src="images/spanduk fix.jpg" alt="Spanduk Mie Oen Coolin Air">
+  </header>
+
+  <div class="container">
+
+    <!-- JAM BUKA -->
+    <section class="card">
+      <h3>⏰ Jam Buka</h3>
+      <p class="muted">Senin–Minggu • 07:00 – 20:00</p>
+      <p style="margin-top:12px">
+        <a class="btn" href="https://wa.me/6282118956607?text=Halo%20Mie%20Oen%20Coolin%20Air%2C%20saya%20mau%20pesan" target="_blank">Pesan via WhatsApp</a>
+      </p>
+    </section>
+
+    <!-- MENU LENGKAP (SLIDER) -->
+    <section id="menu" class="card">
+      <h3>📖 Menu Lengkap</h3>
+      <p class="muted">Geser untuk lihat semua menu atau klik panah.</p>
+      <div class="slider" id="menuSlider">
+        <div class="slides">
+          <img src="images/1.jpg" alt="Menu 1">
+          <img src="images/2.jpg" alt="Menu 2">
+          <img src="images/3.jpg" alt="Menu 3">
+          <img src="images/4.jpg" alt="Menu 4">
+        </div>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+      </div>
+      <div class="dots"></div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="card">
+      <h3>📞 Kontak</h3>
+      <ul style="list-style:none;padding:0;margin:0">
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6282118956607" target="_blank">+62 821-1895-6607</a></li>
+        <li><strong>Telepon:</strong> 0821-1895-6607</li>
+      </ul>
+    </section>
+
+    <!-- LOKASI -->
+    <section id="map" class="card">
+      <h3>📍 Lokasi & Peta</h3>
+      <div style="width:100%;height:300px;border-radius:10px;overflow:hidden">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.1799236465804!2d108.11805527504804!3d-6.3707569623194855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb5f985d5fa89%3A0x49d841754f4fc9c6!2sMie%20Oen%20Coolin%20Air!5e0!3m2!1sen!2sid!4v1757770244745!5m2!1sen!2sid"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Mie Oen Coolin Air — Street food & minuman tradisional.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const slider = document.getElementById("menuSlider");
+    const slides = slider.querySelector(".slides");
+    const images = slider.querySelectorAll("img");
+    const prevBtn = slider.querySelector(".prev");
+    const nextBtn = slider.querySelector(".next");
+    const dotsContainer = document.querySelector(".dots");
+
+    let index = 0;
+    let autoSlide;
+
+    // buat dots
+    images.forEach((_, i) => {
+      let dot = document.createElement("span");
+      if (i === 0) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+    });
+    const dots = document.querySelectorAll(".dots span");
+
+    function showSlide(i) {
+      const containerWidth = slider.clientWidth;
+      const slideWidth = images[0].clientWidth + 16; // gambar + margin
+      const maxIndex = images.length - 1;
+
+      if (i < 0) index = maxIndex;
+      else if (i > maxIndex) index = 0;
+      else index = i;
+
+      // hitung posisi supaya gambar aktif ada di tengah
+      const offset = (containerWidth - slideWidth) / 2;
+      slides.style.transform = `translateX(${-index * slideWidth + offset}px)`;
+
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+    }
+
+    prevBtn.addEventListener("click", () => { showSlide(index - 1); resetAutoSlide(); });
+    nextBtn.addEventListener("click", () => { showSlide(index + 1); resetAutoSlide(); });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => { showSlide(i); resetAutoSlide(); });
+    });
+
+    function startAutoSlide() {
+      autoSlide = setInterval(() => { showSlide(index + 1); }, 4000);
+    }
+    function resetAutoSlide() {
+      clearInterval(autoSlide);
+      startAutoSlide();
+    }
+    showSlide(0);
+    startAutoSlide();
+
+    // Swipe di HP
+    let startX = 0;
+    slides.addEventListener("touchstart", e => { startX = e.touches[0].clientX; });
+    slides.addEventListener("touchend", e => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) { showSlide(index + 1); resetAutoSlide(); }
+      else if (endX - startX > 50) { showSlide(index - 1); resetAutoSlide(); }
+    });
+
+    // Animasi scroll muncul
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
